@@ -13,17 +13,47 @@ public class App {
     //todo Task 2
     public void helloRobot(){
         // input your solution here
-        System.out.println("0123456789012345678901");
+        System.out.println("0123456789012345678901" + System.lineSeparator() +
+                         "         __" + System.lineSeparator() +
+                " _(\\    |@@|" + System.lineSeparator() +
+                "(__/\\__ \\--/ __" + System.lineSeparator() +
+                "   \\___|----|  |   __" + System.lineSeparator() +
+                "       \\ }{ /\\ )_ / _\\" + System.lineSeparator() +
+                "       /\\__/\\ \\__O (__" + System.lineSeparator() +
+                "      (--/\\--)    \\__/" + System.lineSeparator() +
+                "      _)(  )(_" + System.lineSeparator() +
+                "     `---''---`");
     }
 
     //todo Task 3
     public void sumOfLiterals(){
         // input your solution here
+        int sum;
+        char z = 'Z';
+        int a = 0xface;
+        int b = 012;
+        long c = 80L;
+        float d = 44e-1f;
+        double e = 5.5f;
+        double f = 8.88e1;
+        double g = 99.9;
+
+        int zz = z;
+        int cc = (int) c;
+        int dd = (int) d;
+        int ee = (int) e;
+        int ff = (int) f;
+        int gg = (int) g;
+
+        sum = zz+a+b+cc+dd+ee+ff+gg;
+        System.out.println(sum);
     }
 
     //todo Task 4
     public void addTwoNumbers(){
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+
     }
 
     //todo Task 5
