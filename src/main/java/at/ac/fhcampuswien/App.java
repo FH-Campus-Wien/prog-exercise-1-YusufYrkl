@@ -117,13 +117,13 @@ public class App {
     public void ratingSalesPerson() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter annual Revenue");
-        int x = sc.nextInt();
-
         for (int i = 1; i <= 2; i++) {
 
-            if (0 <= x || x >= 100000) {
+        System.out.println("Enter annual Revenue: \n" +
+                "0-100 000");
+        int x = sc.nextInt();
+
+            if (x <= 0 || x >= 100000) {
                 System.out.printf("Invalid Revenue" + System.lineSeparator());
 
             } else if (x <= 0 || x < 20000) {
@@ -144,36 +144,70 @@ public class App {
     public void getCommissionRate(){
         // input your solution here#
         Scanner sc = new Scanner(System.in);
+        double y;
 
-        System.out.println("Enter CommissionClass: ");
-        double x = sc.nextDouble();
+        for (int i = 1; i <= 2; i++) {
+        System.out.println("Enter CommissionClass: \n" +
+                "Eingabe: 1 --> Provision: 0,01\n" +
+                "Eingabe: 2 --> Provision: 0,02\n" +
+                "Eingabe: 3 --> Provision: 0,03\n" +
+                "Eingabe: 4 --> Provision: 0,04");
+
+        int x = sc.nextInt();
 
         switch (x){
-            case 0.01:
-                System.out.println("Your Commission Rate was set to 0.01");
+            case 1:
+                y = 0.01;
                 break;
-            case 0.02:
-                System.out.println("Your Commission Rate was set to 0.02");
+            case 2:
+                y = 0.02;
                 break;
-            case 0.03:
-                System.out.println("Your Commission Rate was set to 0.03");
+            case 3:
+                y = 0.03;
                 break;
-            case 0.04:
-                System.out.println("Your Commission Rate was set to 0.04");
+            case 4:
+                y = 0.04;
                 break;
             default:
-                System.out.println("Your Commission Rate was set to 0.00");
+                y = 0.00;
+        }
+        System.out.println("Your Commission Rate was set to "+y);
         }
     }
 
     //todo Task 9
     public void leapyear(){
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        for (int i = 1; i <= 2; i++) {
+            System.out.print("Year: ");
+            int x = sc.nextInt();
+
+            if (x % 4 == 0 && (x % 100 != 0 || x == 0)) {
+                System.out.println("Leapyear\n");
+            } else {
+                System.out.println("Not a Leapyear\n");
+            }
+        }
     }
 
     //todo Task 10
     public void transposedNumbers(){
         // input your solution here
+        Scanner sc = new Scanner(System.in);
+        int z = 0;
+
+        System.out.println("Number: ");
+        int x = sc.nextInt();
+
+        while(x != 0)
+        {
+            int y = x % 10;
+            z = z * 10 + y;
+            x = x/10;
+        }
+        System.out.println(z);
+
     }
 
 
