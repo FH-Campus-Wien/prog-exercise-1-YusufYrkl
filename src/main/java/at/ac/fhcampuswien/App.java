@@ -119,8 +119,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         for (int i = 1; i <= 2; i++) {
 
-        System.out.println("Enter annual Revenue: \n" +
-                "0-100 000");
+        System.out.println("Enter annual Revenue: ");
         int x = sc.nextInt();
 
             if (x <= 0 || x >= 100000) {
