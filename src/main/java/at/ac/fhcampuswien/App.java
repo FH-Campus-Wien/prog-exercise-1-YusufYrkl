@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class App {
@@ -71,7 +72,9 @@ public class App {
         int y;
 
         System.out.println("Before Swap:");
+        System.out.print("x: ");
         x = sc.nextInt();
+        System.out.print("y: ");
         y = sc.nextInt();
 
         x = x + y;
@@ -79,8 +82,8 @@ public class App {
         x = x - y;
 
         System.out.println("After Swap:");
-        System.out.println(x +
-                     "\n"+ y );
+        System.out.println("x: "+ x +System.lineSeparator()+
+                     "y: "+ y );
     }
 
     //todo Task 6
@@ -89,53 +92,56 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int x;
         int y;
-        for (int i = 1; i <= 3; i++) {
-            System.out.println("n1: ");
+
+            System.out.print("n1: ");
             x = sc.nextInt();
-            System.out.println("n2: ");
+            System.out.print("n2: ");
             y = sc.nextInt();
 
             if (x == y) {
-                System.out.printf("n1 == n2"+ System.lineSeparator());
+                System.out.print("n1 == n2"+ System.lineSeparator());
 
             } else if (x > y) {
-                System.out.printf("n1 > n2"+ System.lineSeparator());
+                System.out.print("n1 > n2"+ System.lineSeparator());
 
             } else if (y > x) {
-                System.out.printf("n2 > n1"+ System.lineSeparator());
+                System.out.print("n2 > n1"+ System.lineSeparator());
 
             } else if (x < y) {
-                System.out.printf("n1 < n2"+ System.lineSeparator());
+                System.out.print("n1 < n2"+ System.lineSeparator());
 
             } else if (y < x) {
-                System.out.println("n2 > n1"+ System.lineSeparator());
+                System.out.print("n2 > n1"+ System.lineSeparator());
             }
-        }
+
     }
 
     //todo Task 7
     public void ratingSalesPerson() {
         // input your solution here
         Scanner sc = new Scanner(System.in);
-        for (int i = 1; i <= 2; i++) {
 
-        System.out.println("Enter annual Revenue: ");
+
+        System.out.print("Enter annual Revenue: ");
         int x = sc.nextInt();
 
-            if (x <= 0 || x >= 100000) {
+            if (x < 0 || x >= 100000) {
                 System.out.printf("Invalid Revenue" + System.lineSeparator());
 
-            } else if (x <= 0 || x < 20000) {
+            } else if (x >= 0 && x < 20000) {
                 System.out.printf("Poor Sales Revenue" + System.lineSeparator());
 
-            } else if (x <= 50000 || x < 80000) {
+            } else if (x >= 20000 && x < 50000) {
                 System.out.printf("Average Sales Revenue" + System.lineSeparator());
 
-            } else if (x <= 80000 || x < 100000) {
+            } else if (x >= 50000 && x < 80000) {
+                System.out.printf("Good Sales Revenue" + System.lineSeparator());
+
+            } else if (x >= 80000 && x < 100000) {
                 System.out.printf("Excellent Sales Revenue" + System.lineSeparator());
             }
 
-        }
+
     }
 
 
@@ -145,12 +151,8 @@ public class App {
         Scanner sc = new Scanner(System.in);
         double y;
 
-        for (int i = 1; i <= 2; i++) {
-        System.out.println("Enter CommissionClass: \n" +
-                "Eingabe: 1 --> Provision: 0,01\n" +
-                "Eingabe: 2 --> Provision: 0,02\n" +
-                "Eingabe: 3 --> Provision: 0,03\n" +
-                "Eingabe: 4 --> Provision: 0,04");
+
+        System.out.print("Enter CommissionClass: ");
 
         int x = sc.nextInt();
 
@@ -171,23 +173,23 @@ public class App {
                 y = 0.00;
         }
         System.out.println("Your Commission Rate was set to "+y);
-        }
+
     }
 
     //todo Task 9
     public void leapyear(){
         // input your solution here
         Scanner sc = new Scanner(System.in);
-        for (int i = 1; i <= 2; i++) {
+
             System.out.print("Year: ");
             int x = sc.nextInt();
 
-            if (x % 4 == 0 && (x % 100 != 0 || x == 0)) {
-                System.out.println("Leapyear\n");
+            if (x % 4 == 0 && (x % 100 != 0 || x%400 == 0)) {
+                System.out.println("Leapyear");
             } else {
-                System.out.println("Not a Leapyear\n");
+                System.out.println("Not a Leapyear");
             }
-        }
+
     }
 
     //todo Task 10
@@ -196,7 +198,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int z = 0;
 
-        System.out.println("Number: ");
+        System.out.print("Number: ");
         int x = sc.nextInt();
 
         while(x != 0)
